@@ -1,9 +1,18 @@
 import subprocess
-import time
+from subprocess import PIPE
 
 
-def subprosesscpp(input_data):
-    subprocess.run()
+def run_cpp_thing(path_to_data):
+    process = subprocess.run(f'cmd /c a.exe < {path_to_data}',
+                shell=True,
+                stdout=PIPE,
+                stderr=PIPE,
+                timeout=100000)
+    print(len(process.stdout))
+    stdout_text = (process.stdout.decode("utf-8"))
+    print(process.returncode)
+    return stdout_text
 
+n = input()
 
-file_name = input()
+print(run_cpp_thing(n))

@@ -27,7 +27,6 @@ public:
         root->left = empty_leaf;
         root->right = empty_leaf;
         root->parent = empty_leaf;
-        cout << empty_leaf << endl;
     }
 
     TreeNode *get_root() {
@@ -213,7 +212,7 @@ TreeNode *buildTree() {
         tree.insert(root, currentNumber);
     }
 
-//    cout << tree.getString(tree.getRoot()) << endl;
+    cout << tree.getString(tree.getRoot()) << endl;
 //    cout << tree.finder(2) << endl;
 //    cout << tree.finder(222) << endl;
 //    cout << tree.finder(1) << endl;
@@ -222,6 +221,5 @@ TreeNode *buildTree() {
 
 int main() {
     TreeNode *root = buildTree();
-    cout << "end";
     return 0;
 }
