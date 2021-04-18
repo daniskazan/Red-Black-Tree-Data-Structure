@@ -211,10 +211,9 @@ TreeNode *buildTree() {
     for (int i = 1; i < numberOfNums; i++) {
         cin >> currentNumber;
         tree.insert(root, currentNumber);
-        tree.prettyPrint();
     }
 
-    cout << tree.getString(tree.getRoot()) << endl;
+//    cout << tree.getString(tree.getRoot()) << endl;
 //    cout << tree.finder(2) << endl;
 //    cout << tree.finder(222) << endl;
 //    cout << tree.finder(1) << endl;
